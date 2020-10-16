@@ -66,12 +66,43 @@
             <button type="button" class="hero-button" data-modal-open>
                 Заказать услугу
             </button>
-            
+<!--------MODAL ------->
                 <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
                 <button  class="close-btn" type="button" data-modal-close><svg class="close-btn-icon" width="18px" height="18px">
                     <use href="./images/sprite3.svg#close"></use>
                 </svg></button>
+                
+                
+                <form action="" class="form">
+                    <b class="modal-caption">Оставьте свои данные, мы вам перезвоним</b>
+            
+                    <label for="name" class="form-field"><span class="form-label">Имя</span>
+                        <input type="text" class="form-input" name="name" id="name" >
+                    </label>    
+                    
+                    <label for="tel"class="form-field"><span class="form-label">Телефон</span>
+                        <input type="tel" class="form-input" name="tel" id="tel">
+                    </label>
+
+                    <label for="email"class="form-field"><span class="form-label">Почта</span>
+                        <input type="mail" class="form-input" name="mail" id="email">
+                    </label>
+
+                    <label for="comment"class="form-field"><span class="form-label">Комментарий</span>
+                        <textarea name="comment" class="form-comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                    </label>
+
+                    <label for="policy"></label>
+                    <input type="checkbox" class="policy-agreement" name="policy" id="policy">Соглашаюсь с рассылкой и принимаю<span class="policy-agreement-color">Условия договора</span></input>
+
+                    <button type="submit" class="send-btn">Отправить
+                       </button>
+
+                </form>
+
+
+
                     </div>
                 </div>
         </div>
@@ -79,7 +110,7 @@
 </div>
 
 
-    <!--заголовок Advantages-->
+    <!-- Advantages-->
     <section class="advantages">
     
         <h2 hidden>Advantages</h2>
@@ -401,8 +432,7 @@
             </address>
         </div>
 
-    --!-
-        <div class="footer-socials">
+         <div class="footer-socials">
             <p class="social-text">Присоединяйтесь</p>
             <ul class="social-list">
                 <li class="item">
@@ -443,18 +473,42 @@
 
 <div class="subscribe">
     <p class="subscribe-title">Подпишитесь на рассылку</p>
-    <div class="subscribe-form">
-        <form action="">
-            <input type="email" name="email" id="e-mail" placeholder="E-mail">
+    
+        <form action="" class="subscribe-form">
+            <input type="email"             class="subscribe-form_input" name="email" id="e-mail" placeholder="E-mail">
+            
+            <button type="submit" class="subscribe-btn">Подписаться
+                <svg class="submit-icon" width="24px"  height="24px"><use href="./images/sprite3.svg#icon-send">
+                </use>
+            </svg></button>
         </form>
-    </div>
-    <button>Подписаться</button>
+    
+   
 </div>
 
     </div> 
 </footer>
 
 <script src="./js/modal.js"></script>
+
+<script>
+    (() => {
+      document
+        .querySelector('.js-speaker-form')
+        .addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+            console.log(`${name}: ${value}`),
+          );
+
+          e.currentTarget.reset();
+        });
+    })();
+  </script>
+
+
     </body>
+
 </html>
 
