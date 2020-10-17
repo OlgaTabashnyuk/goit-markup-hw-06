@@ -76,46 +76,49 @@
                 
                 
                 <form action="" class="form">
-                    <b class="modal-caption">Оставьте свои данные, мы вам перезвоним</b>
+                    <h2 class="modal-caption">Оставьте свои данные, мы вам перезвоним</h2>
             
-                    <label for="name" class="form-field">
+                    <label class="form-field">
                         <span class="form-label">Имя</span>
-                        <input type="text" class="form-input" name="name" id="name" >
+                        <input type="text" class="form-input" name="name"  >
                         <svg class="form-icon" width="18px" height="18px">
                         <use href="./images/sprite3.svg#person"></use>
                     </svg>
                     </label>    
                     
-                    <label for="tel"class="form-field">
+                    <label class="form-field">
                         <span class="form-label">Телефон</span>
-                        <input type="tel" class="form-input" name="tel" id="tel">
+                        <input type="tel" class="form-input" name="tel">
                         <svg class="form-icon" width="18px" height="18px">
                             <use href="./images/sprite3.svg#tel"></use>
                         </svg>
                     </label>
 
-                    <label for="email"class="form-field">
+                    <label class="form-field">
                         <span class="form-label">Почта</span>
-                        <input type="mail" class="form-input" name="mail" id="email">
+                        <input type="mail" class="form-input" name="mail">
                         <svg class="form-icon" width="18px" height="18px">
                             <use href="./images/sprite3.svg#email"></use>
                         </svg>
                     </label>
 
-                    <label for="comment"class="form-field">
+                    <label class="form-field">
                         <span class="form-label">Комментарий</span>
-                        <textarea name="comment" class="form-comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                        <textarea name="comment" class="form-comment"  cols="30" rows="10" placeholder="Введите текст"></textarea>
                     </label>
 
-                    <label for="form-policy" class="policy-label">
-                        <input type="checkbox" name="form-policy" value="accept-policy" id="form-policy" class="form-policy visually-hidden">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></input>
+                    <label class="policy-label">
+                        <input class="checkbox" type="checkbox" name="form-policy" value="accept-policy"  class="form-policy visually-hidden" required>
+                            <span class="policy-icon">
+
+                            </span> Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></input>
                     </label>
 
                     <button type="submit" class="send-btn">Отправить
                        </button>
 
                 </form>
-
+                
 
 
                     </div>
