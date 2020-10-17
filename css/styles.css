@@ -57,7 +57,16 @@ img {
 }
 
 
-    
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden; 
+}
     
 /*============  LOGO  ============*/
 .logo {
@@ -249,7 +258,6 @@ img {
     color: var(--accent-color);
     margin: 0px 700px 200px 700px;
     border-radius: 4px;
-    border: none;
     font-family: var(--main-font);
     font-style: normal;
     font-weight: 700;
@@ -259,7 +267,7 @@ img {
     text-align: center;
     color: white;
     background-color: var(--accent-color);
-    border: none;
+    
     
 }
 /* ========MODAL============== */
@@ -287,6 +295,7 @@ img {
 
 .modal {
     position: absolute;
+    display: block;
     width: 528px;
     height: 581px;
     top: 50%;
@@ -346,11 +355,14 @@ img {
   .send-btn {
     width: 200px;
     height: 50px;
+    margin-left: 164px;
+    margin-top: 30px;
 
   }
 
 
   .form-field {
+      position: relative;
       display: block;
       margin-bottom: 10px;
   }
@@ -365,17 +377,54 @@ img {
   }
 
   .form-input {
-      display: block;
-      width: 100%;
-      height: 40px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 32px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  .form-input:focus,
+  .form-comment:focus {
+    border: 1px solid var(--accent-color);
+  }
+  
+  .form-input:focus + .form-icon {
+      fill: var(--accent-color);
+      
+
   }
   .form-comment {
+      display: block;
+      padding-top: 12px;
+      padding-left: 16px;
       width: 100%;
       height: 120px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.142;
+      letter-spacing: 0.01em;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      box-sizing: border-box;
+      border-radius: 4px;
+
+      color: rgba(117, 117, 117, 0.5);
       resize: none;
   }
 
-  .policy-agreement, .policy-agreement-color {
+  .form-icon {
+      position: absolute;
+      bottom: 11px;
+      left: 12px;
+      
+  }
+
+  .form-icon {
+    font-family: Roboto;
+    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 1.71;
@@ -384,11 +433,38 @@ img {
   }
 
   
-/* .policy-agreement-color:hover,
-.policy-agreement-color:focus {
+  .send-btn {
+    width: 200px;
+    height: 50px;
     color: var(--accent-color);
-  } */
+    margin-top: 30px;
+    margin-left: 125px;
+    border-radius: 4px;
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: white;
+    background-color: var(--accent-color);   
+    
+  }
 
+.policy-label  {
+    display: block;
+    margin-left: 14px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+
+
+}
 /*================ END HERO ===========*/
 
 /*=========== ADVANTAGES ===========*/
